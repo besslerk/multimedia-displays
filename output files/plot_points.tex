@@ -1,0 +1,42 @@
+\documentclass{article}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+\usepackage{auto-pst-pdf}
+\usepackage{tcolorbox}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{multicol}
+\begin{document}
+
+\begin{figure}[htbp]
+    \centering
+    \psset{unit=1.6}
+    \begin{pspicture}(-1,-1)(8,8)
+        \psChromaticityDiagram[ColorSpace=CIE, bgcolor=white, textcolor=black, PSfont=Times New Roman, fontscale=10, contrast=0.7]
+        \psdot[dotsize=5pt, dotstyle=*, linecolor=blue](3.13, 3.29)
+        \psdot[dotsize=2pt, dotstyle=*, linecolor=red](3.05, 3.13)
+        \psdot[dotsize=2pt, dotstyle=*, linecolor=green](3.06, 3.17)
+        \psdot[dotsize=2pt, dotstyle=*, linecolor=orange](3.09, 3.23)
+        \psdot[dotsize=2pt, dotstyle=*, linecolor=cyan](3.17, 3.37)
+        \psdot[dotsize=2pt, dotstyle=*, linecolor=magenta](3.25, 3.51)
+        \psdot[dotsize=2pt, dotstyle=*, linecolor=yellow](3.50, 3.90)
+    \end{pspicture}
+    \begin{tcolorbox}[colback=white, colframe=black, boxrule=0.5mm, width=0.4\textwidth]
+        \centering
+        \footnotesize
+        \begin{tabular}{ll}
+            \textcolor{blue}{\rule{0.2cm}{0.2cm}} & Original Point \\
+            \textcolor{red}{\rule{0.2cm}{0.2cm}} & Wavelength shift -10 \\
+            \textcolor{green}{\rule{0.2cm}{0.2cm}} & Wavelength shift -5 \\
+            \textcolor{orange}{\rule{0.2cm}{0.2cm}} & Wavelength shift -2 \\
+            \textcolor{cyan}{\rule{0.2cm}{0.2cm}} & Wavelength shift 2 \\
+            \textcolor{magenta}{\rule{0.2cm}{0.2cm}} & Wavelength shift 5 \\
+            \textcolor{yellow}{\rule{0.2cm}{0.2cm}} & Wavelength shift 10 \\
+        \end{tabular}
+    \end{tcolorbox}
+    \caption{platzhalter dies das}
+    \label{fig:platzhalter}
+\end{figure}
+
+\end{document}
